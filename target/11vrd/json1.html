@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="bootstrap3/jquery.min.js"></script>
+<script>
+    //创建json数组
+    let j1=["刘备","关羽","张飞"];
+    console.log(j1[1])
+    //map格式
+    let j2={"name":"曹操","age":18};
+    console.log(j2.name+":"+j2.age);
+    //嵌套
+    let j3={"name":"曹操","age":18,"firends":["张辽","许褚","荀彧"]};
+    console.log(j3.firends[1]);
+    let j4=[{"name":"曹操","age":18,"firends":["张辽","许褚","荀彧"]},
+        {"name":"孙权","age":18,"firends":["周瑜","甘宁","鲁肃"]}];
+    console.log(j4[0].name)
+    //json对象和json字符串
+    let jsonString='["刘备","关羽","张飞"]';
+    //需要先转成对象
+    let j5=JSON.parse(jsonString);
+    console.log(j5[2]);
+
+</script>
+</body>
+</html>

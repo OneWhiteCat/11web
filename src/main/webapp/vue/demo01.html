@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="mydiv">
+    <h3>商品数量: {{count}}</h3>
+    <h3>{{info}}</h3>
+    <h3 v-text="info"></h3>
+    <div v-html="info"></div>
+
+<input type="button" value="添加">
+<script src="../bootstrap3/jquery.min.js"></script>
+<!--引入框架文件-->
+<script src="../js/vue.js"></script>
+<script>
+    //创建vue对象
+    let v=new Vue({
+        el:"#mydiv",//通过设置vue操作元素的 选择器
+        data:{count:0,info:"Hello VUE!"}
+    })
+    $("input").click(function () {
+        v.count++;
+        //修改vue对象中的变量 由于此变量和页面中的元素进行了绑定
+        //只要值改变页面跟着变
+    })
+
+</script>
+</body>
+</html>
